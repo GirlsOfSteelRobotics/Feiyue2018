@@ -9,6 +9,7 @@ import org.usfirst.frc.team3504.robot.commands.*;
 
 import com.ctre.phoenix.motorcontrol.NeutralMode; //added
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX; //added
+import com.ctre.phoenix.motorcontrol.FollowerType; //added
 
 /**
  *
@@ -42,6 +43,12 @@ public class Chassis extends Subsystem {
     	rightMaster.setSafetyEnabled(false);
     	rightFollowA.setSafetyEnabled(false);
     	rightFollowB.setSafetyEnabled(false);
+    	
+    	rightFollowA.follow(rightMaster, FollowerType.PercentOutput);
+    	rightFollowB.follow(rightMaster, FollowerType.PercentOutput);
+    	
+    	leftFollowA.follow(leftMaster, FollowerType.PercentOutput);
+    	leftFollowB.follow(leftMaster, FollowerType.PercentOutput);
     	
     	drive = new DifferentialDrive(leftMaster, rightMaster);
     	drive.setSafetyEnabled(false);
