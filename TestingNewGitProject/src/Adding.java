@@ -6,7 +6,10 @@ public class Adding {
 	public static void main(String[] args) {
 		
 		System.out.println(num +"and" + num2);
-		
+		/*
+		 * 
+		 * 
+		 */
 		//Hi Pushing Test
 		System.out.println("HELLO, HEWO");
 		//comment ***
