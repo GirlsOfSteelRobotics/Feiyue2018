@@ -8,8 +8,9 @@ public class Adding {
 		System.out.println(num +"and" + num2);
 		
 		//Hi Pushing Test
-		System.out.println("Hi, World");
-		//other comment
+		
+		//comment ***
+		//other comment ^^^
 	}
 
 }
