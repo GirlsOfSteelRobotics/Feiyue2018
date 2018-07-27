@@ -6,15 +6,26 @@
 /*----------------------------------------------------------------------------*/
 
 package org.usfirst.frc.team3504.robot;
-
+import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
-
+import edu.wpi.first.wpilibj.buttons.JoystickButton;
 import org.usfirst.frc.team3504.robot.commands.*;
+import org.usfirst.frc.team3504.robot.commands.DriveForward;
+
+
 
 /**
  * This class is the glue that binds the controls on the physical operator
  * interface to the commands and command groups that allow control of the robot.
  */
 public class OI {
-	
+	Joystick joystick1 = new Joystick(RobotMap.JOYSTICK_PORT);
+	Button button1 = new JoystickButton(joystick1, 1); 
+	Button button2 = new JoystickButton(joystick1, 2);
+	public OI() {
+		button1.whenPressed(new DriveForward());
+		button2.whenPressed(new DriveStop());   
+	}
+
+
 }
