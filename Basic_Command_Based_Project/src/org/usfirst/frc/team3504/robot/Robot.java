@@ -25,6 +25,7 @@ import org.usfirst.frc.team3504.robot.subsystems.*;
  * project.
  */
 public class Robot extends TimedRobot {
+	public static DriveTrain driveTrain; 
 	public static OI oi;
 
 	Command autonomousCommand;
@@ -36,6 +37,7 @@ public class Robot extends TimedRobot {
 	 */
 	@Override
 	public void robotInit() {
+		driveTrain = new DriveTrain(); 
 		oi = new OI();
 //		chooser.addDefault("Default Auto", new ExampleCommand());
 		// chooser.addObject("My Auto", new MyAutoCommand());
